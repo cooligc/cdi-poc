@@ -8,4 +8,9 @@
 		<class>com.himanshu.poc.cdi.interceptor.LoggedInterceptor</class>
 	</interceptors>
 
+	<alternatives>
+<!-- 		<class>com.himanshu.poc.cdi.alternatives.TestServiceImplAlternative</class> -->
+		<class>com.himanshu.poc.cdi.alternatives.TestServiceImplAlternative2</class>
+	</alternatives>
+
 </beans>
