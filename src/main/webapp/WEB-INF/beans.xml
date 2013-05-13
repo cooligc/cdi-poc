@@ -3,4 +3,9 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/beans_1_0.xsd">
 
 	<!-- This is a blank file, just to tell container we will be using CDI -->
+
+	<interceptors>
+		<class>com.himanshu.poc.cdi.interceptor.LoggedInterceptor</class>
+	</interceptors>
+
 </beans>
