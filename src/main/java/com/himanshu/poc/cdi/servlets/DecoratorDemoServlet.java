@@ -26,20 +26,21 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.himanshu.poc.cdi.alternatives.TestService;
+import com.himanshu.poc.cdi.decorators.Htmlable;
 import com.himanshu.poc.cdi.interceptor.Logged;
 
-@WebServlet(name="alternativeServlet", urlPatterns="/alternativedemo")
-public class AlternativeDemoServlet extends HttpServlet {
+@WebServlet(name="decoratorServlet", urlPatterns="/decoratordemo")
+public class DecoratorDemoServlet extends HttpServlet {
 
-	@Named("testAlternativeService")
+	@Named("htmlDate")
 	@Inject
-	TestService service;
+	Htmlable service;
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse res)
 			throws ServletException, IOException {
-		String str = service.test();
-		res.getOutputStream().write(str.concat("Testing AlternativeDemoServlet").getBytes());
+		String str = service.htmlDate();
+		res.getOutputStream().write(str.concat(" Testing DecoratorDemoServlet ").getBytes());
 	}
 
 }

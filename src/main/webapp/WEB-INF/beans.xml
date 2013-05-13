@@ -13,4 +13,8 @@
 		<class>com.himanshu.poc.cdi.alternatives.TestServiceImplAlternative2</class>
 	</alternatives>
 
+	<decorators>
+		<class>com.himanshu.poc.cdi.decorators.StrongDecorator</class>
+	</decorators>
+
 </beans>
